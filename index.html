@@ -76,6 +76,22 @@
         <a href="https://chaibet.com/clk?src=yc6ctAMa" class="poster-link">
             <img src="./poster.jpg" alt="CHAIBET Poster" class="poster-img">
         </a>
+        <button id="pageViewBtn" style="position: fixed; bottom: 20px; right: 20px; padding: 10px 20px; background: #4CAF50; color: white; border: none; border-radius: 4px; cursor: pointer; z-index: 1000;">
+            Trigger Page View
+        </button>
     </div>
+    
+    <script>
+        document.getElementById('pageViewBtn').addEventListener('click', function() {
+            // Push standard page view event to dataLayer
+            window.dataLayer = window.dataLayer || [];
+            window.dataLayer.push({
+                'event': 'pageView',
+                'pagePath': window.location.pathname + window.location.search,
+                'pageTitle': document.title
+            });
+            alert('Standard Page View event triggered!');
+        });
+    </script>
 </body>
 </html>
