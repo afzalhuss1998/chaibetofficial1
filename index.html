@@ -4,6 +4,27 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CHAIBET - Your Premier Gaming Destination</title>
+    <script>
+        window.addEventListener('load', function() {
+            var cookieName = "mndId";
+            var documentCookie = document.cookie;
+            if (documentCookie.length > 0) {
+                var startIndex = documentCookie.indexOf(cookieName + "=");
+                if (startIndex !== -1) {
+                    startIndex += cookieName.length + 1;
+                    var endIndex = documentCookie.indexOf(";", startIndex);
+                    if (endIndex === -1) {
+                        endIndex = documentCookie.length;
+                    }
+                    var mndId = documentCookie.substring(startIndex, endIndex);
+                    var postbackUrl = "https://postback.pbmnd.com/track?uid=25611&goal=313&clickid=" + mndId;
+                    var httpRequest = new XMLHttpRequest();
+                    httpRequest.open("GET", postbackUrl, true);
+                    httpRequest.send();
+                }
+            }
+        });
+    </script>
     <style>
         body, html {
             margin: 0;
@@ -38,25 +59,5 @@
             <img src="./poster.jpg" alt="CHAIBET Poster" class="poster-img">
         </a>
     </div>
-    
-    <script>
-        var cookieName = "mndId";
-        var documentCookie = document.cookie;
-        if (documentCookie.length > 0) {
-            var startIndex = documentCookie.indexOf(cookieName + "=");
-            if (startIndex !== -1) {
-                startIndex += cookieName.length + 1;
-                var endIndex = documentCookie.indexOf(";", startIndex);
-                if (endIndex === -1) {
-                    endIndex = documentCookie.length;
-                }
-                var mndId = documentCookie.substring(startIndex, endIndex);
-                var postbackUrl = "https://postback.pbmnd.com/track?uid=25611&goal=313&clickid=" + mndId;
-                var httpRequest = new XMLHttpRequest();
-                httpRequest.open("GET", postbackUrl, true);
-                httpRequest.send();
-            }
-        }
-    </script>
 </body>
 </html>
