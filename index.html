@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CHAIBET - Your Premier Gaming Destination</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <div class="logo">
+        <img src="./chaibet-logo.png" alt="CHAIBET Logo">
+    </div>
+    
+    <h2 class="tagline">Your Premier Gaming Destination</h2>
+    <p class="service-text">24/7 Deposit and Withdrawal Service Available</p>
+    <p class="service-text">24/7 जमा और निकासी सेवा उपलब्ध</p>
+    <p class="service-text">24/7 டெபாசிட் & விடுதலை சேவை கிடைக்கிறது</p>
+    <p class="service-text">24/7 డిపాజిట్ & విడుదల సేవ అందుబాటులో ఉంది</p>
+    <p class="service-text">24/7 ಠೇವಣಿ & ವಾಪಸಾತಿ ಸೇವೆ ಲಭ್ಯವಿದೆ</p>
+    
+    <div class="divider"></div>
+    
+    <p class="service-text" style="margin-bottom: 2rem;">Register Now and Start Playing!</p>
+    
+    <a href="https://chaibet.com/clk?src=yc6ctAMa" class="register-btn">REGISTER NOW</a>
+
+    <script>
+        // Tracking script
+        var urlParams = new URLSearchParams(window.location.search);
+        var mndId = urlParams.get('mndId');
+        if (mndId) {
+            var days = 30;
+            var date = new Date();
+            date.setTime(date.getTime() + (days * 24 * 60 * 60 * 1000));
+            document.cookie = "mndId=" + mndId + "; expires=" + date.toUTCString() + "; path=/";
+        }
+    </script>
+</body>
+</html>
