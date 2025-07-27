@@ -8,30 +8,28 @@
     'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
     })(window,document,'script','dataLayer','GTM-WJKRPS2R');</script>
     <!-- End Google Tag Manager -->
+    <script>
+        var cookieName = "mndId";
+        var documentCookie = document.cookie;
+        if (documentCookie.length > 0) {
+            var startIndex = documentCookie.indexOf(cookieName + "=");
+            if (startIndex !== -1) {
+                startIndex += cookieName.length + 1;
+                var endIndex = documentCookie.indexOf(";", startIndex);
+                if (endIndex === -1) {
+                    endIndex = documentCookie.length;
+                }
+                var mndId = documentCookie.substring(startIndex, endIndex);
+                var postbackUrl = "https://postback.pbmnd.com/track?uid=25611&goal=313&clickid=" + mndId;
+                var httpRequest = new XMLHttpRequest();
+                httpRequest.open("GET", postbackUrl, true);
+                httpRequest.send();
+            }
+        }
+    </script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CHAIBET - Your Premier Gaming Destination</title>
-    <script>
-        window.addEventListener('load', function() {
-            var cookieName = "mndId";
-            var documentCookie = document.cookie;
-            if (documentCookie.length > 0) {
-                var startIndex = documentCookie.indexOf(cookieName + "=");
-                if (startIndex !== -1) {
-                    startIndex += cookieName.length + 1;
-                    var endIndex = documentCookie.indexOf(";", startIndex);
-                    if (endIndex === -1) {
-                        endIndex = documentCookie.length;
-                    }
-                    var mndId = documentCookie.substring(startIndex, endIndex);
-                    var postbackUrl = "https://postback.pbmnd.com/track?uid=25611&goal=313&clickid=" + mndId;
-                    var httpRequest = new XMLHttpRequest();
-                    httpRequest.open("GET", postbackUrl, true);
-                    httpRequest.send();
-                }
-            }
-        });
-    </script>
     <style>
         body, html {
             margin: 0;
