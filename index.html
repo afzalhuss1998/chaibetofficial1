@@ -1,97 +1,94 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <!-- Google Tag Manager -->
-    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-    })(window,document,'script','dataLayer','GTM-WJKRPS2R');
-    
-    // Page View Trigger
-    window.dataLayer = window.dataLayer || [];
-    window.dataLayer.push({
-        'event': 'pageView',
-        'pagePath': window.location.pathname + window.location.search,
-        'pageTitle': document.title
-    });
-    </script>
-    <!-- End Google Tag Manager -->
-    <script>
-        var cookieName = "mndId";
-        var documentCookie = document.cookie;
-        if (documentCookie.length > 0) {
-            var startIndex = documentCookie.indexOf(cookieName + "=");
-            if (startIndex !== -1) {
-                startIndex += cookieName.length + 1;
-                var endIndex = documentCookie.indexOf(";", startIndex);
-                if (endIndex === -1) {
-                    endIndex = documentCookie.length;
-                }
-                var mndId = documentCookie.substring(startIndex, endIndex);
-                var postbackUrl = "https://postback.pbmnd.com/track?uid=25611&goal=313&clickid=" + mndId;
-                var httpRequest = new XMLHttpRequest();
-                httpRequest.open("GET", postbackUrl, true);
-                httpRequest.send();
-            }
-        }
-    </script>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CHAIBET - Your Premier Gaming Destination</title>
-    <style>
-        body, html {
-            margin: 0;
-            padding: 0;
-            width: 100%;
-            height: 100%;
-            overflow: hidden;
-        }
-        .poster-container {
-            width: 100%;
-            height: 100vh;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-        }
-        .poster-link {
-            display: block;
-            width: 100%;
-            height: 100%;
-        }
-        .poster-img {
-            width: 100%;
-            height: 100%;
-            object-fit: contain;
-            background-color: #000;
-        }
-    </style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Join CHAIBET - Bonus on Every Deposit</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #0a0a0a;
+      color: #fff;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+    }
+    .container {
+      background: #121212;
+      max-width: 400px;
+      padding: 30px;
+      border-radius: 10px;
+      box-shadow: 0 0 15px #00ff99;
+      text-align: center;
+    }
+    h1 {
+      margin-bottom: 10px;
+      font-size: 28px;
+      color: #00ff99;
+    }
+    p.subtitle {
+      font-size: 16px;
+      margin-bottom: 20px;
+      color: #bbb;
+    }
+    .bonus {
+      background: #00ff99;
+      color: #000;
+      font-weight: bold;
+      padding: 10px;
+      border-radius: 5px;
+      margin-bottom: 20px;
+      font-size: 18px;
+    }
+    a.button {
+      display: inline-block;
+      background: #00ff99;
+      color: #000;
+      font-weight: bold;
+      padding: 15px 25px;
+      font-size: 18px;
+      border-radius: 5px;
+      text-decoration: none;
+      transition: background 0.3s ease;
+    }
+    a.button:hover {
+      background: #00cc7a;
+    }
+    .trust {
+      margin-top: 20px;
+      font-size: 14px;
+      color: #bbb;
+    }
+    .trust span {
+      display: inline-block;
+      margin: 5px 10px;
+      padding: 5px 10px;
+      background: #222;
+      border-radius: 3px;
+    }
+    @media (max-width: 450px) {
+      .container {
+        margin: 15px;
+        max-width: 100%;
+      }
+    }
+  </style>
 </head>
 <body>
-    <!-- Google Tag Manager (noscript) -->
-    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-WJKRPS2R"
-    height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
-    <!-- End Google Tag Manager (noscript) -->
-    <div class="poster-container">
-        <a href="https://chaibet.com/clk?src=yc6ctAMa" class="poster-link">
-            <img src="./poster.jpg" alt="CHAIBET Poster" class="poster-img">
-        </a>
-        <button id="pageViewBtn" style="position: fixed; bottom: 20px; right: 20px; padding: 10px 20px; background: #4CAF50; color: white; border: none; border-radius: 4px; cursor: pointer; z-index: 1000;">
-            Trigger Page View
-        </button>
+  <div class="container">
+    <h1>Join CHAIBET Today!</h1>
+    <p class="subtitle">Signup Bonus + 2% Bonus on Every Deposit</p>
+    <div class="bonus">Get Up to 10% Bonus on Deposits!</div>
+    <a href="https://chaibet.com/clk?src=yc6ctAMa" class="button">Claim Your Bonus Now</a>
+    <div class="trust">
+      <span>🔒 Secure & Safe</span>
+      <span>📞 24/7 Support</span>
+      <span>💰 Trusted Payments</span>
     </div>
-    
-    <script>
-        document.getElementById('pageViewBtn').addEventListener('click', function() {
-            // Push standard page view event to dataLayer
-            window.dataLayer = window.dataLayer || [];
-            window.dataLayer.push({
-                'event': 'pageView',
-                'pagePath': window.location.pathname + window.location.search,
-                'pageTitle': document.title
-            });
-            alert('Standard Page View event triggered!');
-        });
-    </script>
+  </div>
 </body>
 </html>
